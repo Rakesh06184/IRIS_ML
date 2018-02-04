@@ -1,0 +1,25 @@
+we take the Sepals And Petals seperately for training the model. Let's see
+
+petal=iris[['PetalLengthCm','PetalWidthCm','Species']] sepal=iris[['SepalLengthCm','SepalWidthCm','Species']]
+
+In the above steps, we separate the original dataframe by splitting it by columns [PetalLength , PetalWidth] for the petals and similarly for Sepal. Now what petal and sepal variables have is a dataframe with only 3 columns i.e ['PetalLengthCm','PetalWidthCm','Species'] for (petal) variable and ['SepalLengthCm','SepalWidthCm','Species'] for sepal variable.
+
+train_p,test_p=train_test_split(petal,test_size=0.3)
+
+In the above step we split the petal dataframe into test and train dataset as we had done earlier.
+
+train_x_p=train_p[['PetalWidthCm','PetalLengthCm']]
+
+Now we take only the attributes or the features columns into seperate variable and not the output column. This is the training dataset.
+
+train_y_p=train_p.Species
+
+Then we store the corresponding output of each row into another variable.This is the output for the training dataset. Now we will use train_x_p and train_y_p for training the model.
+
+test_x_p=test_p[['PetalWidthCm','PetalLengthCm']] test_y_p=test_p.Species
+
+These are similar to the previous steps that we did for training dataset.
+
+Hope You understood...If not please ask again.
+
+
